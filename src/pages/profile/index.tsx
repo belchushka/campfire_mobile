@@ -26,6 +26,7 @@ const Index = () => {
   const { user } = useAuth();
   const navigate = useNavigation();
   const goToSettings = () => navigate.dispatch(StackActions.push("settings"));
+  const goToQuiz = () => navigate.dispatch(StackActions.push("feedback_quiz"));
   const dispatch = useTypedDispatch();
   const logout = () => {
     dispatch(signOut());
@@ -84,7 +85,7 @@ const Index = () => {
         <Container>
           <Space height={20} />
           <GradientBox style={[s.day_feedback_gradient]}>
-            <TouchableOpacity style={[s.day_feedback]}>
+            <TouchableOpacity onPress={goToQuiz} style={[s.day_feedback]}>
               <View>
                 <Text style={[s.day_feedback_title, setFont("semiBold")]}>
                   Как прошёл твой день?

@@ -1,5 +1,5 @@
 import { IWithStyle } from "types";
-import { KeyboardType } from "react-native";
+import { KeyboardType, TextInputProps } from "react-native";
 import { Control } from "react-hook-form";
 
 export interface IInput extends IWithStyle {
@@ -11,4 +11,5 @@ export interface IInput extends IWithStyle {
   keyboardType?: KeyboardType;
   rules?: {};
   error?: boolean;
+  inputProps?: TextInputProps;
 }

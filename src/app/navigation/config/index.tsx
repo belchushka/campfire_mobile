@@ -7,6 +7,7 @@ export type StackParams = {
   home: undefined;
   initial: undefined;
   settings: undefined;
+  feedback_quiz: undefined;
 };
 
 export default {

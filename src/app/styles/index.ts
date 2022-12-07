@@ -23,6 +23,7 @@ export const setFont = (weight: keyof typeof fontWeight) => {
 
 export const colors = {
   grey: "#DBDDE1",
+  fadedGrey: "#F6F6F6",
   deepGrey: "#9a9b9e",
   primary: "#EB6D2E",
   dark: "#2E2E3C",

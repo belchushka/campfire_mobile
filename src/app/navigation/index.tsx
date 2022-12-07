@@ -10,6 +10,7 @@ import Initial from "box/pages/initial";
 import Settings from "box/pages/settings";
 import Schedule from "box/pages/schedule";
 import Contacts from "box/pages/contacts";
+import FeedbackQuiz from "box/pages/feedback_quiz";
 
 const Stack = createNativeStackNavigator<StackParams>();
 
@@ -41,6 +42,7 @@ export const Navigation: React.FC<INavigation> = () => {
         <Stack.Screen name={"initial"} component={Initial} />
         <Stack.Screen name={"home"} component={HomeTabNavigation} />
         <Stack.Screen name={"settings"} component={Settings} />
+        <Stack.Screen name={"feedback_quiz"} component={FeedbackQuiz} />
       </Stack.Navigator>
     </NavigationContainer>
   );

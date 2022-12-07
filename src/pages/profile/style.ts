@@ -23,7 +23,7 @@ export default StyleSheet.create({
   },
 
   day_feedback_gradient: {
-    borderRadius: 36,
+    borderRadius: 20,
   },
 
   day_feedback_title: {
@@ -32,5 +32,6 @@ export default StyleSheet.create({
   },
   day_feedback_subtitle: {
     fontSize: 12,
+    color: "white",
   },
 });

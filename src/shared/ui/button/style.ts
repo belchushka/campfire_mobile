@@ -11,4 +11,18 @@ export default StyleSheet.create({
   button_text: {
     fontSize: 18,
   },
+
+  pill_button: {
+    borderRadius: 32,
+  },
+
+  pill_inner: {
+    width: "100%",
+    paddingVertical: 14,
+    alignItems: "center",
+  },
+
+  pill_inner_text: {
+    fontSize: 16,
+  },
 });

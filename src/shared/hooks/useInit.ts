@@ -22,7 +22,7 @@ export const useInit = () => {
           })
         );
       } else {
-        navigate.dispatch(StackActions.replace("login"));
+        throw new Error("Not authorized");
       }
     } catch (e) {
       navigate.dispatch(StackActions.replace("login"));

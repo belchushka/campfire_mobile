@@ -1,8 +1,9 @@
 import React from "react";
 import { ActivityIndicator, Text, TouchableOpacity } from "react-native";
-import { IButton } from "./types";
+import { IButton, IPillButton } from "./types";
 import s from "./style";
-import { setFont } from "styles/index";
+import { colors, setFont } from "styles/index";
+import { GradientBox } from "box/shared";
 
 export const Button: React.FC<IButton> = ({
   children,
@@ -43,5 +44,45 @@ export const Button: React.FC<IButton> = ({
         )}
       </Text>
     </TouchableOpacity>
+  );
+};
+
+const textColors = {
+  grey: {
+    color: colors.deepGrey,
+  },
+  gradient: {
+    color: "white",
+  },
+};
+
+export const PillButton: React.FC<IPillButton> = ({
+  style,
+  width,
+  preset = "gradient",
+  children,
+  onClick = () => null,
+}) => {
+  return (
+    <GradientBox
+      style={[
+        s.pill_button,
+        style,
+        {
+          ...(width && { width }),
+        },
+      ]}
+      colors={
+        preset == "grey" ? [colors.fadedGrey, colors.fadedGrey] : undefined
+      }
+    >
+      <TouchableOpacity onPress={onClick} style={s.pill_inner}>
+        <Text
+          style={[s.pill_inner_text, setFont("semiBold"), textColors[preset]]}
+        >
+          {children}
+        </Text>
+      </TouchableOpacity>
+    </GradientBox>
   );
 };

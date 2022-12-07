@@ -14,6 +14,7 @@ export const Input: React.FC<IInput> = ({
   keyboardType = "default",
   rules = {},
   error,
+  inputProps,
 }) => {
   const {
     field,
@@ -35,6 +36,7 @@ export const Input: React.FC<IInput> = ({
         cursorColor={colors.primaryCursor}
         onChangeText={field.onChange}
         style={[s.input, setFont("semiBold"), error && s.input_error, style]}
+        {...inputProps}
       />
     </>
   );

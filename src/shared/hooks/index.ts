@@ -7,3 +7,4 @@ export * from "./useTypedDispatch";
 export * from "./useAuth";
 export * from "./useInit";
 export * from "./useFetch";
+export * from "./useBoolean";

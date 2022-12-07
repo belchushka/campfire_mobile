@@ -8,3 +8,9 @@ export interface IButton extends IWithChildren, IWithStyle {
   loading?: boolean;
   onClick?: () => void;
 }
+
+export interface IPillButton extends IWithChildren, IWithStyle {
+  preset?: "grey" | "gradient";
+  width?: number;
+  onClick: () => void;
+}
